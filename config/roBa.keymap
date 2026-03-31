@@ -81,7 +81,7 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp EQUAL  &kp NON_US_BACKSLASH
+&kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp EQUAL  &kp BACKSLASH
 &trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans     &kp GRAVE
 &trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &trans
 &trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans                                                             &trans
@@ -111,7 +111,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &mkp MB4  &mkp MB5  &mkp MB3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
