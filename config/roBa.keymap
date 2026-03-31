@@ -43,11 +43,6 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
-
-        aasdf {
-            bindings = <&none>;
-            key-positions = <18 19 6 7 8>;
-        };
     };
 
     macros {
