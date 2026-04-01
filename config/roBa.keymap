@@ -9,9 +9,8 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
+    // automouse-layer = <4>;
     scroll-layers = <5>;
-    scroll-invert-y;
 
     // arrows {
     //     layers = <3>;
