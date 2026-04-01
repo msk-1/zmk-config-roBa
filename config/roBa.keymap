@@ -91,10 +91,10 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp EQUAL  &kp BACKSLASH
-&trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans     &kp GRAVE
-&trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &trans
-&trans           &trans       &trans     &trans      &trans       &trans      &trans  &trans                                                             &trans
+&kp EXCLAMATION   &kp AT_SIGN  &kp POUND  &kp DOLLAR      &kp PERCENT                      &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp EQUAL  &kp BACKSLASH
+&kp LEFT_CONTROL  &trans       &trans     &kp LC(LSHIFT)  &trans       &trans      &trans  &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans     &kp GRAVE
+&kp LEFT_SHIFT    &trans       &trans     &trans          &trans       &trans      &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &trans
+&trans            &trans       &trans     &trans          &trans       &trans      &trans  &trans                                                             &trans
             >;
         };
 
