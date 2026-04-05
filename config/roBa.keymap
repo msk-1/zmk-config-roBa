@@ -106,8 +106,8 @@
         SYMBOL {
             bindings = <
 &kp LS(EXCLAMATION)  &kp LS(AT_SIGN)  &kp LS(POUND)  &kp LS(DOLLAR)  &kp LS(PERCENT)                      &kp CARET  &kp LS(AMPERSAND)         &kp LS(ASTERISK)           &kp EQUAL  &kp BACKSLASH
-&kp LEFT_CONTROL     &none            &none          &kp LC(LSHIFT)  &none            &none       &none   &none      &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)  &none      &kp GRAVE
-&kp LEFT_SHIFT       &none            &none          &none           &none            &none       &none   &none      &kp LS(LEFT_BRACE)        &kp LS(RIGHT_BRACE)        &none      &none
+&kp LEFT_CONTROL     &none            &none          &none           &none            &none       &none   &none      &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)  &none      &kp GRAVE
+&kp LEFT_SHIFT       &none            &none          &none           &none            &none       &none   &none      &kp LBKT                  &kp RBKT                   &none      &none
 &none                &none            &none          &trans          &trans           &trans      &trans  &trans                                                                     &none
             >;
         };
