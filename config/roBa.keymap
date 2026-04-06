@@ -66,55 +66,125 @@
         };
 
         // Shifted symbols for Remote Desktop compatibility
+
         m_excl: m_excl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N1>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_at: m_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N2>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_hash: m_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N3>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_dllr: m_dllr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N4>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_prcnt: m_prcnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N5>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N6>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_amps: m_amps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N7>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_star: m_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N8>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N8>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_lpar: m_lpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N9>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N9>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         m_rpar: m_rpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N0>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N0>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
     };
 
@@ -138,7 +208,7 @@
 &lt 6 Q           &kp W         &kp E             &kp R                   &kp T                                                   &kp Y                  &kp U  &kp I      &kp O    &kp P
 &mt LCTRL A       &kp S         &kp D             &mt LEFT_CONTROL F      &kp G        &none                       &kp MINUS      &kp H                  &kp J  &lt 5 K    &kp L    &mt RIGHT_ALT SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                   &kp B        &kp LEFT_WIN                &kp SEMICOLON  &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 1 SLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 3 LANG2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                             &kp ESC
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 3 LANG2  &lt 2 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -146,7 +216,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &trans  &trans  &trans  &trans                       &none           &kp HOME        &kp END       &none            &none
+&kp ESCAPE        &kp F2  &trans  &trans  &trans                       &none           &kp HOME        &kp END       &none            &none
 &kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans      &none    &none           &none           &none         &none            &none
 &trans            &trans  &trans  &trans  &trans  &trans      &kp DEL  &trans                                                         &none
@@ -157,19 +227,19 @@
 
         SYMBOL {
             bindings = <
-&m_excl           &m_at   &m_hash  &m_dllr  &m_prcnt                      &m_caret  &m_amps  &m_star  &kp EQUAL  &kp BACKSLASH
-&kp LEFT_CONTROL  &none   &none    &none    &none     &none       &none   &none     &m_lpar  &m_rpar  &none      &kp GRAVE
-&kp LEFT_SHIFT    &none   &none    &none    &none     &none       &none   &none     &kp LBKT &kp RBKT &none      &none
-&none             &none   &none    &trans   &trans    &trans      &trans  &trans                                &none
+&m_excl           &m_at  &m_hash  &m_dllr  &m_prcnt                      &m_caret  &m_amps   &m_star   &kp EQUAL  &kp BACKSLASH
+&kp LEFT_CONTROL  &none  &none    &none    &none     &none       &none   &none     &m_lpar   &m_rpar   &none      &kp GRAVE
+&kp LEFT_SHIFT    &none  &none    &none    &none     &none       &none   &none     &kp LBKT  &kp RBKT  &none      &none
+&none             &none  &none    &trans   &trans    &trans      &trans  &trans                                   &none
             >;
         };
 
         NUM {
             bindings = <
-&kp ESC           &none  &none  &none   &kp F7                       &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PLUS
-&kp LEFT_CONTROL  &none  &none  &kp F2  &kp F10  &none       &trans  &none      &kp N4  &kp N5  &kp N6  &kp ASTERISK
-&kp LEFT_SHIFT    &none  &none  &none   &kp F6   &none       &none   &kp N0     &kp N7  &kp N8  &kp N9  &kp SLASH
-&none             &none  &none  &trans  &trans   &trans      &trans  &trans                             &trans
+&kp ESC           &kp F2  &none  &none   &kp F7                       &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp PLUS
+&kp LEFT_CONTROL  &none   &none  &kp F2  &kp F10  &none       &trans  &none      &kp N4  &kp N5  &kp N6  &kp ASTERISK
+&kp LEFT_SHIFT    &none   &none  &none   &kp F6   &none       &none   &kp N0     &kp N7  &kp N8  &kp N9  &kp SLASH
+&none             &none   &none  &trans  &trans   &trans      &trans  &trans                             &trans
             >;
         };
 
