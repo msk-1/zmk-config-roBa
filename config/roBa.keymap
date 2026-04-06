@@ -240,8 +240,8 @@
         SYMBOL {
             bindings = <
 &kp ESC         &none  &none    &none    &none                         &none     &none    &none    &none      &kp GRAVE
-&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none   &m_caret  &m_amps  &m_star  &kp EQUAL  &kp BACKSLASH
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none   &none     &m_lpar  &m_rpar  &kp LBKT   &kp RBKT
+&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none   &m_caret  &m_amps  &m_star  &m_lpar    &m_rpar
+&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none   &none     &none    &none    &kp EQUAL  &kp BACKSLASH
 &none           &none  &none    &trans   &trans    &trans      &trans  &trans                                 &none
             >;
         };
