@@ -32,7 +32,7 @@
         compatible = "zmk,combos";
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&m_stab>;
             key-positions = <11 12>;
         };
 
@@ -66,6 +66,18 @@
         };
 
         // Shifted symbols for Remote Desktop compatibility
+
+        m_stab: m_stab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
 
         m_excl: m_excl {
             compatible = "zmk,behavior-macro";
