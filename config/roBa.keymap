@@ -203,6 +203,34 @@
                 <&macro_release>,
                 <&kp LSHFT>;
         };
+
+        m_lbrace: m_lbrace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_SHIFT>,
+                <&macro_press>,
+                <&kp LBKT>,
+                <&macro_press>,
+                <&kp LSHIFT>;
+
+            label = "M_LBRACE";
+        };
+
+        m_rbrace: m_lbrace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RSHIFT>,
+                <&macro_press>,
+                <&kp RBKT>,
+                <&macro_press>,
+                <&kp RSHIFT>;
+
+            label = "M_LBRACE";
+        };
     };
 
     behaviors {
@@ -244,10 +272,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &none     &none    &none    &kp EQUAL  &kp GRAVE
-&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps  &m_star  &m_lpar    &m_rpar
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &none    &none    &kp LBKT   &kp RBKT
-&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                 &none
+&kp ESC         &none  &none    &none    &none                          &none     &none      &none      &kp EQUAL  &kp GRAVE
+&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps    &m_star    &m_lpar    &m_rpar
+&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace  &kp LBKT   &kp RBKT
+&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                     &none
             >;
         };
 
