@@ -209,13 +209,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LSHIFT>,
+                <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp LBKT>,
                 <&macro_release>,
-                <&kp LSHIFT>;
-
-            label = "M_LBRACE";
+                <&kp LSHFT>;
         };
 
         m_rbrace: m_rbrace {
@@ -223,13 +221,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LSHIFT>,
+                <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp RBKT>,
                 <&macro_release>,
-                <&kp LSHIFT>;
-
-            label = "M_RBRACE";
+                <&kp LSHFT>;
         };
     };
 
@@ -263,7 +259,7 @@
             bindings = <
 &kp ESCAPE        &none   &none    &none   &none                        &none           &kp HOME        &kp END       &none            &none
 &kp LEFT_CONTROL  &kp F2  &kp F10  &kp F7  &kp F6  &trans      &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_SHIFT    &none   &none    &none   &none   &trans      &none    &none           &none           &none         &none            &none
+&kp LEFT_SHIFT    &none   &none    &none   &none   &trans      &none    &none           &m_lbrace       &m_rbrace     &none            &none
 &trans            &trans  &trans   &trans  &trans  &trans      &kp DEL  &trans                                                         &none
             >;
 
