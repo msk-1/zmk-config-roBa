@@ -218,7 +218,7 @@
             label = "M_LBRACE";
         };
 
-        m_rbrace: m_lbrace {
+        m_rbrace: m_rbrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
