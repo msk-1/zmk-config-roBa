@@ -1,3 +1,10 @@
+/*
+ * roBa 共通のデバイスツリー設定
+ * - 物理レイアウト
+ * - キーマトリクス
+ * - エンコーダー
+ */
+
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
