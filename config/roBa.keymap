@@ -232,6 +232,13 @@
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
         };
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -245,7 +252,7 @@
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mt LEFT_CONTROL LANG2  &lt 2 SPACE  &lt 3 LANG1      &kp BACKSPACE     &mt RIGHT_SHIFT ENTER                             &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
@@ -256,7 +263,7 @@
 &trans            &trans  &trans   &trans  &trans  &trans      &kp DEL  &trans                                                         &none
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(K_SCROLL_UP) LC(K_SCROLL_DOWN)>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SYMBOL {
