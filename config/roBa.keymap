@@ -39,7 +39,7 @@
             key-positions = <18 19>;
         };
 
-        nyoro {
+        tilde {
             bindings = <&kp GRAVE>;
             key-positions = <17 18>;
         };
