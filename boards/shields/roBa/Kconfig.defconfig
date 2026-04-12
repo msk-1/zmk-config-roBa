@@ -1,3 +1,7 @@
+# roBa デフォルト設定
+# - 左右の識別
+# - スプリットキーボード設定
+
 if SHIELD_ROBA_R
 
 config ZMK_KEYBOARD_NAME

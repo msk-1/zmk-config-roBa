@@ -1,3 +1,9 @@
+/*
+ * roBa 右手側（トラックボール側）のデバイスツリー設定
+ * - トラックボール (PMW3610)
+ * - オートマウスレイヤー (zip_temp_layer_threshold)
+ */
+
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -17,16 +23,39 @@
 };
 
 / {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <
-            &zip_temp_layer 4 10000
-            &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
-            &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+    zip_temp_layer_threshold: zip_temp_layer_threshold {
+        compatible = "zmk,input-processor-temp-layer-threshold";
+        #input-processor-cells = <2>;
+        
+        // AML発動に必要な累積移動量
+        threshold = <15>;
+        
+        // 以下で指定したキー以外を押すとAML解除
+        excluded-positions = <
+            6 // u
+            7 // i
+            8 // o
+            18 // j
+            19 // k
+            20 // l
         >;
+
+        // キー入力から300ms間はAMLを発動しない
+        require-prior-idle-ms = <300>;
+        
+        // 蓄積された移動量をリセットするまでの時間
+        reset-timeout-ms = <200>;
     };
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
+    input-processors = <
+        &zip_temp_layer_threshold 4 10000
+        &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
+        &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+    >;
 };
 
 &pinctrl {
@@ -65,15 +94,4 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
-};
-
-&zip_temp_layer {
-    excluded-positions = <
-        6 // u
-        7 // i
-        8 // o
-        18 // j
-        19 // k
-        20 // l
-    >;
 };
