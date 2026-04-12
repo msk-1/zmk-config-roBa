@@ -41,7 +41,7 @@
 
         nyoro {
             bindings = <&kp GRAVE>;
-            key-positions = <6 7>;
+            key-positions = <17 18>;
         };
 
         bq {
