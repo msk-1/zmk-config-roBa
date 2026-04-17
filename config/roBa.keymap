@@ -346,10 +346,10 @@
 
         ALT_LAYER {
             bindings = <
-&trans  &trans   &trans   &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &m_stab  &kp TAB  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans  &trans  &trans      &trans  &trans                          &trans
+&kp ESC  &trans   &trans   &trans  &trans                      &trans    &trans    &trans        &trans     &trans
+&trans   &m_stab  &kp TAB  &trans  &trans  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans    &trans    &trans        &trans     &trans
+&trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans                                       &trans
             >;
         };
     };
