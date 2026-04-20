@@ -221,6 +221,30 @@
                 <&kp LSHFT>;
         };
 
+        m_dqt: m_dqt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp SQT>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+
+        m_colon: m_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp SEMICOLON>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+
         // Layer-mod: holds LALT + activates specified layer
 
         lm: lm {
