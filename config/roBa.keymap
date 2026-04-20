@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "tapdelay.dtsi"
 
 &mt {
     flavor = "balanced";
@@ -30,22 +31,22 @@
         };
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&td_tab>;
             key-positions = <12 13>;
         };
 
         eq {
-            bindings = <&kp EQUAL>;
+            bindings = <&td_equal>;
             key-positions = <18 19>;
         };
 
         tilde {
-            bindings = <&kp GRAVE>;
+            bindings = <&td_grave>;
             key-positions = <6 7>;
         };
 
         bq {
-            bindings = <&kp BACKSLASH>;
+            bindings = <&td_bslh>;
             key-positions = <30 31>;
         };
     };
@@ -59,10 +60,13 @@
         };
 
         // Shifted symbols for Remote Desktop compatibility
+        // wait-ms/tap-ms add delay for modifier key recognition over RDP/VPN
 
         m_stab: m_stab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -75,6 +79,8 @@
         m_excl: m_excl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -87,6 +93,8 @@
         m_at: m_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -99,6 +107,8 @@
         m_hash: m_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -111,6 +121,8 @@
         m_dllr: m_dllr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -123,6 +135,8 @@
         m_prcnt: m_prcnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -135,6 +149,8 @@
         m_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -147,6 +163,8 @@
         m_amps: m_amps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -159,6 +177,8 @@
         m_star: m_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -171,6 +191,8 @@
         m_lpar: m_lpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -183,6 +205,8 @@
         m_rpar: m_rpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -195,6 +219,8 @@
         m_lbrace: m_lbrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -207,6 +233,8 @@
         m_rbrace: m_rbrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -219,6 +247,8 @@
         m_dqt: m_dqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -231,6 +261,8 @@
         m_colon: m_colon {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -282,7 +314,6 @@
         };
 
         // Hold: ALT + layer, Tap: key
-
         alt_lt: alt_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "ALT_LAYER_TAP";
@@ -298,10 +329,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E             &kp R               &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A       &kp S         &kp D             &mt LEFT_CONTROL F  &kp G        &none          &kp SEMICOLON  &kp H        &kp J  &lt 5 K    &kp L    &lt 1 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V               &kp B        &kp TAB        &kp SQT        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &alt_lt 7 LANG2     &lt 2 SPACE  &kp LANG1      &kp BACKSPACE  &lt 3 ENTER                             &lt 6 ESC
+&lt_q 6 0           &td_w         &td_e             &td_r               &td_t                                      &td_y        &td_u  &td_i       &td_o     &td_p
+&hm_a LCTRL 0       &td_s         &td_d             &hm_f LCTRL 0       &td_g        &none          &td_semi       &td_h        &td_j  &lt_k 5 0   &td_l     &lt_minus 1 0
+&hm_z LSHIFT 0      &td_x         &td_c             &td_v               &td_b        &td_tab        &td_sqt        &td_n        &td_m  &td_comma   &td_dot   &hm_slash RSHIFT 0
+&kp LEFT_CONTROL    &kp LEFT_ALT  &kp LEFT_COMMAND  &alt_lt 7 LANG2     &lt_space 2 0  &kp LANG1    &td_bspc       &lt_enter 3 0                             &lt_esc 6 0
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -309,10 +340,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &none   &none   &none   &none                         &kp HOME        &trans          &trans        &kp END          &trans
-&kp LEFT_CONTROL  &kp F2  &kp F6  &kp F7  &kp F10  &trans      &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_SHIFT    &none   &none   &none   &none    &trans      &none    &none           &none           &none         &none            &none
-&trans            &trans  &trans  &trans  &trans   &trans      &kp DEL  &trans                                                         &none
+&td_esc           &none    &none    &none    &none                          &td_home   &trans     &trans   &td_end    &trans
+&kp LEFT_CONTROL  &td_f2   &td_f6   &td_f7   &td_f10  &trans      &none     &td_left   &td_down   &td_up   &td_right  &none
+&kp LEFT_SHIFT    &none    &none    &none    &none    &trans      &none     &none      &none      &none    &none      &none
+&trans            &trans   &trans   &trans   &trans   &trans      &td_del   &trans                                    &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -320,19 +351,19 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt     &kp SEMICOLON  &m_colon  &kp EQUAL
+&td_esc         &none  &none    &none    &none                          &td_sqt   &m_dqt     &td_semi       &m_colon  &td_equal
 &m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps    &m_star        &m_lpar   &m_rpar
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &kp LBKT  &kp RBKT
-&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                        &none
+&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &td_lbkt  &td_rbkt
+&none           &none  &none    &trans   &trans    &trans      &td_del  &trans                                        &none
             >;
         };
 
         NUM {
             bindings = <
-&kp ESC  &none   &none   &none   &none                              &kp EQUAL  &kp PLUS  &kp MINUS  &kp ASTERISK  &kp SLASH
-&kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &none       &none          &kp N6     &kp N7    &kp N8     &kp N9        &kp N0
-&none    &none   &none   &none   &none   &none       &none          &none      &none     &none      &kp PERIOD    &kp SLASH
-&none    &none   &none   &trans  &trans  &trans      &kp BACKSPACE  &none                                         &trans
+&td_esc  &none    &none    &none    &none                           &td_equal  &td_plus  &td_minus  &td_star    &td_slash
+&td_n1   &td_n2   &td_n3   &td_n4   &td_n5  &none       &none       &td_n6     &td_n7    &td_n8     &td_n9      &td_n0
+&none    &none    &none    &none    &none   &none       &none       &none      &none     &none      &td_period  &td_slash
+&none    &none    &none    &trans   &trans  &trans      &td_bspc    &none                                       &trans
             >;
         };
 
@@ -365,10 +396,10 @@
 
         ALT_LAYER {
             bindings = <
-&kp ESC      &trans   &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&kp LS(TAB)  &kp TAB  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans   &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&td_esc     &trans    &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&m_stab     &td_tab   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
