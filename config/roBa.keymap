@@ -65,8 +65,8 @@
         m_stab: m_stab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -79,8 +79,8 @@
         m_excl: m_excl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -93,8 +93,8 @@
         m_at: m_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -107,8 +107,8 @@
         m_hash: m_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -121,8 +121,8 @@
         m_dllr: m_dllr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -135,8 +135,8 @@
         m_prcnt: m_prcnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -149,8 +149,8 @@
         m_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -163,8 +163,8 @@
         m_amps: m_amps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -177,8 +177,8 @@
         m_star: m_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -191,8 +191,8 @@
         m_lpar: m_lpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -205,8 +205,8 @@
         m_rpar: m_rpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -219,8 +219,8 @@
         m_lbrace: m_lbrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -233,8 +233,8 @@
         m_rbrace: m_rbrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -247,8 +247,8 @@
         m_dqt: m_dqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
@@ -261,8 +261,8 @@
         m_colon: m_colon {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
