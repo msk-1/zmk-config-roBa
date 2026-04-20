@@ -41,17 +41,12 @@
 
         tilde {
             bindings = <&kp GRAVE>;
-            key-positions = <17 18>;
+            key-positions = <6 7>;
         };
 
         bq {
             bindings = <&kp BACKSLASH>;
             key-positions = <30 31>;
-        };
-
-        qui {
-            bindings = <&kp SQT>;
-            key-positions = <20 21>;
         };
     };
 
@@ -325,7 +320,7 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt     &kp SEMICOLON  &m_colon  &kp BACKSLASH
+&kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt     &kp SEMICOLON  &m_colon  &kp EQUAL
 &m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps    &m_star        &m_lpar   &m_rpar
 &kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &kp LBKT  &kp RBKT
 &none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                        &none
