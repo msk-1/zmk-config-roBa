@@ -2,90 +2,94 @@
  * Tap Delay Macros for Remote Desktop Compatibility
  * Reference: https://github.com/zmkfirmware/zmk/issues/759
  *
- * All keys have 20ms delay to ensure modifier recognition over RDP/VPN.
+ * All keys have delay to ensure modifier recognition over RDP/VPN.
  * When holding Shift and pressing another key, the delay allows
  * the modifier to be recognized before the key is sent.
  */
 
+// Delay settings (adjust these values if needed)
+#define TD_WAIT_MS 100
+#define TD_TAP_MS 100
+
 / {
     macros {
         // Alphabet keys
-        td_a: td_a { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp A>; };
-        td_b: td_b { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp B>; };
-        td_c: td_c { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp C>; };
-        td_d: td_d { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp D>; };
-        td_e: td_e { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp E>; };
-        td_f: td_f { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp F>; };
-        td_g: td_g { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp G>; };
-        td_h: td_h { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp H>; };
-        td_i: td_i { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp I>; };
-        td_j: td_j { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp J>; };
-        td_k: td_k { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp K>; };
-        td_l: td_l { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp L>; };
-        td_m: td_m { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp M>; };
-        td_n: td_n { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N>; };
-        td_o: td_o { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp O>; };
-        td_p: td_p { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp P>; };
-        td_q: td_q { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp Q>; };
-        td_r: td_r { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp R>; };
-        td_s: td_s { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp S>; };
-        td_t: td_t { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp T>; };
-        td_u: td_u { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp U>; };
-        td_v: td_v { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp V>; };
-        td_w: td_w { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp W>; };
-        td_x: td_x { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp X>; };
-        td_y: td_y { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp Y>; };
-        td_z: td_z { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp Z>; };
+        td_a: td_a { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp A>; };
+        td_b: td_b { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp B>; };
+        td_c: td_c { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp C>; };
+        td_d: td_d { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp D>; };
+        td_e: td_e { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp E>; };
+        td_f: td_f { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp F>; };
+        td_g: td_g { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp G>; };
+        td_h: td_h { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp H>; };
+        td_i: td_i { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp I>; };
+        td_j: td_j { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp J>; };
+        td_k: td_k { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp K>; };
+        td_l: td_l { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp L>; };
+        td_m: td_m { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp M>; };
+        td_n: td_n { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N>; };
+        td_o: td_o { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp O>; };
+        td_p: td_p { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp P>; };
+        td_q: td_q { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp Q>; };
+        td_r: td_r { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp R>; };
+        td_s: td_s { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp S>; };
+        td_t: td_t { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp T>; };
+        td_u: td_u { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp U>; };
+        td_v: td_v { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp V>; };
+        td_w: td_w { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp W>; };
+        td_x: td_x { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp X>; };
+        td_y: td_y { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp Y>; };
+        td_z: td_z { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp Z>; };
 
         // Number keys
-        td_n1: td_n1 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N1>; };
-        td_n2: td_n2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N2>; };
-        td_n3: td_n3 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N3>; };
-        td_n4: td_n4 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N4>; };
-        td_n5: td_n5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N5>; };
-        td_n6: td_n6 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N6>; };
-        td_n7: td_n7 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N7>; };
-        td_n8: td_n8 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N8>; };
-        td_n9: td_n9 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N9>; };
-        td_n0: td_n0 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp N0>; };
+        td_n1: td_n1 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N1>; };
+        td_n2: td_n2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N2>; };
+        td_n3: td_n3 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N3>; };
+        td_n4: td_n4 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N4>; };
+        td_n5: td_n5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N5>; };
+        td_n6: td_n6 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N6>; };
+        td_n7: td_n7 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N7>; };
+        td_n8: td_n8 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N8>; };
+        td_n9: td_n9 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N9>; };
+        td_n0: td_n0 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp N0>; };
 
         // Symbol keys
-        td_semi: td_semi { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp SEMICOLON>; };
-        td_sqt: td_sqt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp SQT>; };
-        td_comma: td_comma { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp COMMA>; };
-        td_dot: td_dot { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp DOT>; };
-        td_slash: td_slash { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp SLASH>; };
-        td_minus: td_minus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp MINUS>; };
-        td_equal: td_equal { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp EQUAL>; };
-        td_plus: td_plus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp PLUS>; };
-        td_star: td_star { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp ASTERISK>; };
-        td_lbkt: td_lbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp LBKT>; };
-        td_rbkt: td_rbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp RBKT>; };
-        td_grave: td_grave { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp GRAVE>; };
-        td_bslh: td_bslh { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp BACKSLASH>; };
-        td_period: td_period { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp PERIOD>; };
+        td_semi: td_semi { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp SEMICOLON>; };
+        td_sqt: td_sqt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp SQT>; };
+        td_comma: td_comma { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp COMMA>; };
+        td_dot: td_dot { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp DOT>; };
+        td_slash: td_slash { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp SLASH>; };
+        td_minus: td_minus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp MINUS>; };
+        td_equal: td_equal { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp EQUAL>; };
+        td_plus: td_plus { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp PLUS>; };
+        td_star: td_star { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp ASTERISK>; };
+        td_lbkt: td_lbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp LBKT>; };
+        td_rbkt: td_rbkt { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp RBKT>; };
+        td_grave: td_grave { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp GRAVE>; };
+        td_bslh: td_bslh { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp BACKSLASH>; };
+        td_period: td_period { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp PERIOD>; };
 
         // Arrow keys
-        td_left: td_left { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp LEFT_ARROW>; };
-        td_down: td_down { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp DOWN_ARROW>; };
-        td_up: td_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp UP_ARROW>; };
-        td_right: td_right { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp RIGHT_ARROW>; };
+        td_left: td_left { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp LEFT_ARROW>; };
+        td_down: td_down { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp DOWN_ARROW>; };
+        td_up: td_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp UP_ARROW>; };
+        td_right: td_right { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp RIGHT_ARROW>; };
 
         // Function keys
-        td_f2: td_f2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp F2>; };
-        td_f6: td_f6 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp F6>; };
-        td_f7: td_f7 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp F7>; };
-        td_f10: td_f10 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp F10>; };
+        td_f2: td_f2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp F2>; };
+        td_f6: td_f6 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp F6>; };
+        td_f7: td_f7 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp F7>; };
+        td_f10: td_f10 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp F10>; };
 
         // Special keys
-        td_tab: td_tab { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp TAB>; };
-        td_space: td_space { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp SPACE>; };
-        td_bspc: td_bspc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp BACKSPACE>; };
-        td_enter: td_enter { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp ENTER>; };
-        td_esc: td_esc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp ESC>; };
-        td_del: td_del { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp DEL>; };
-        td_home: td_home { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp HOME>; };
-        td_end: td_end { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp END>; };
+        td_tab: td_tab { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp TAB>; };
+        td_space: td_space { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp SPACE>; };
+        td_bspc: td_bspc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp BACKSPACE>; };
+        td_enter: td_enter { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp ENTER>; };
+        td_esc: td_esc { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp ESC>; };
+        td_del: td_del { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp DEL>; };
+        td_home: td_home { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp HOME>; };
+        td_end: td_end { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <TD_WAIT_MS>; tap-ms = <TD_TAP_MS>; bindings = <&kp END>; };
     };
 
     behaviors {
