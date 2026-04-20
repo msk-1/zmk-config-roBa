@@ -325,10 +325,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &kp SQT   &kp SEMICOLON  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
-&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps        &m_star    &m_lpar        &m_rpar
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace      &m_rbrace  &kp LBKT       &kp RBKT
-&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                             &none
+&kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt     &kp SEMICOLON  &m_colon  &kp BACKSLASH
+&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps    &m_star        &m_lpar   &m_rpar
+&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &kp LBKT  &kp RBKT
+&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                        &none
             >;
         };
 
