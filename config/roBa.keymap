@@ -49,6 +49,16 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <30 31>;
         };
+
+        layout_shift_on {
+            bindings = <&tog_ls_on>;
+            key-positions = <8 9>;
+        };
+
+        layout_shift_off {
+            bindings = <&tog_ls_off>;
+            key-positions = <20 21>;
+        };
     };
 
     macros {
