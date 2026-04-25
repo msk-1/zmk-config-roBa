@@ -51,12 +51,12 @@
 
         layout_shift_on {
             bindings = <&tog_ls_on>;
-            key-positions = <8 9>;
+            key-positions = <9 21>;
         };
 
         layout_shift_off {
             bindings = <&tog_ls_off>;
-            key-positions = <20 21>;
+            key-positions = <21 33>;
         };
     };
 
@@ -91,6 +91,7 @@
 
     behaviors {
         // Keep the original key_press behavior for ZMK core components
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -98,6 +99,7 @@
         };
 
         // Override &kp for layout shift (Keymap Editor compatible)
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
