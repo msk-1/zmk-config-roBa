@@ -90,6 +90,13 @@
     };
 
     behaviors {
+        // Keep the original key_press behavior for ZMK core components
+        original_key_press: original_key_press {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <1>;
+            label = "KEY_PRESS";
+        };
+
         // Override &kp for layout shift (Keymap Editor compatible)
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
