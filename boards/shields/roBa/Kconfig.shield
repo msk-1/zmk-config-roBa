@@ -6,3 +6,19 @@ config SHIELD_ROBA_R
 
 config SHIELD_ROBA_L
     def_bool $(shields_list_contains,roBa_L)
+
+# レイアウトシフト機能のターゲットレイアウト選択
+choice LAYOUT_SHIFT_TARGET_LAYOUT
+    prompt "Target keyboard layout"
+    default LAYOUT_SHIFT_TARGET_JIS
+
+config LAYOUT_SHIFT_TARGET_JIS
+    bool "Japanese (JIS)"
+
+config LAYOUT_SHIFT_TARGET_DVORAK
+    bool "Dvorak"
+
+config LAYOUT_SHIFT_TARGET_COLEMAK
+    bool "Colemak"
+
+endchoice
