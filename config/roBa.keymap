@@ -5,6 +5,8 @@
  * - マクロ
  */
 
+#include <layout_shift.dtsi>
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 #include <behaviors.dtsi>
