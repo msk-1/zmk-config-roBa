@@ -154,6 +154,18 @@
             bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SEMICOLON>, <&macro_release &kp LSHFT>;
         };
 
+        m_lt: m_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp COMMA>, <&macro_release &kp LSHFT>;
+        };
+
+        m_gt: m_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp PERIOD>, <&macro_release &kp LSHFT>;
+        };
+
         // Layer-mod: holds LALT + activates specified layer
 
         lm: lm {
@@ -273,7 +285,7 @@
             bindings = <
 &kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt     &kp SEMICOLON  &m_colon  &kp EQUAL
 &m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps    &m_star        &m_lpar   &m_rpar
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &kp LBKT  &kp RBKT
+&kp LEFT_SHIFT  &none  &m_lt    &m_gt    &none     &none       &none    &none     &m_lbrace  &m_rbrace      &kp LBKT  &kp RBKT
 &none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                        &none
             >;
         };
