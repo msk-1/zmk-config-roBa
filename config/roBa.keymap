@@ -391,7 +391,7 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &m_caret       &m_amps    &m_star    &m_lpar           &m_rpar
+&kp ESC         &none  &none    &none    &none                          &m_caret       &m_amps    &m_star    &kp EQUAL         &kp BACKSLASH
 &m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &kp SEMICOLON  &m_lpar    &m_rpar    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &kp SQT        &m_lbrace  &m_rbrace  &m_lt             &m_gt
 &none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                                 &none
