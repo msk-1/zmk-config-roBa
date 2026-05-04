@@ -11,6 +11,8 @@ manifest:
       url-base: https://github.com/kumamuk-git
     - name: yamaryu211
       url-base: https://github.com/yamaryu211
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,5 +24,8 @@ manifest:
     - name: zmk-input-processor-temp-layer-threshold
       remote: yamaryu211
       revision: main
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v1
   self:
     path: config

@@ -25,7 +25,7 @@
         compatible = "zmk,combos";
 
         shift_tab {
-            bindings = <&m_stab>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <11 12>;
         };
 
@@ -48,6 +48,16 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <30 31>;
         };
+
+        layout_shift_on {
+            bindings = <&tog_ls_on>;
+            key-positions = <9 21>;
+        };
+
+        layout_shift_off {
+            bindings = <&tog_ls_off>;
+            key-positions = <21 33>;
+        };
     };
 
     macros {
@@ -59,18 +69,6 @@
         };
 
         // Shifted symbols for Remote Desktop compatibility
-
-        m_stab: m_stab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LSHFT>;
-        };
 
         m_excl: m_excl {
             compatible = "zmk,behavior-macro";
@@ -240,6 +238,42 @@
                 <&kp LSHFT>;
         };
 
+        m_lt: m_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp COMMA>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+
+        m_gt: m_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp PERIOD>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+
+        m_crlf: m_crlf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp BACKSLASH &kp R &kp BACKSLASH &kp N>;
+        };
+
+        m_lf: m_lf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp BACKSLASH &kp N>;
+        };
+
         // Layer-mod: holds LALT + activates specified layer
 
         lm: lm {
@@ -262,6 +296,43 @@
     };
 
     behaviors {
+        // Keep the original key_press behavior for ZMK core components
+
+        original_key_press: original_key_press {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <1>;
+            label = "KEY_PRESS";
+        };
+
+        // Override &kp for layout shift (Keymap Editor compatible)
+
+        kp: key_press {
+            compatible = "zmk,behavior-layout-shift-key-press";
+            #binding-cells = <1>;
+            label = "LAYOUT_SHIFT_KEY_PRESS";
+        };
+
+        tog_ls: toggle_layout_shift {
+            compatible = "zmk,behavior-layout-shift-toggle";
+            #binding-cells = <0>;
+            toggle-mode = "flip";
+            label = "LAYOUT_SHIFT_TOGGLE";
+        };
+
+        tog_ls_on: toggle_layout_shift_on {
+            compatible = "zmk,behavior-layout-shift-toggle";
+            #binding-cells = <0>;
+            toggle-mode = "on";
+            label = "LAYOUT_SHIFT_TOGGLE_ON";
+        };
+
+        tog_ls_off: toggle_layout_shift_off {
+            compatible = "zmk,behavior-layout-shift-toggle";
+            #binding-cells = <0>;
+            toggle-mode = "off";
+            label = "LAYOUT_SHIFT_TOGGLE_OFF";
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -276,7 +347,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
         };
@@ -298,10 +369,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E             &kp R               &kp T                                       &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A       &kp S         &kp D             &mt LEFT_CONTROL F  &kp G        &none           &kp SEMICOLON  &kp H        &kp J  &lt 5 K    &kp L    &lt 1 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V               &kp B        &kp ESCAPE      &kp SQT        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &alt_lt 7 LANG2     &lt 2 SPACE  &kp LANG1       &kp BACKSPACE  &lt 3 ENTER                             &lt 6 ESC
+&kp Q             &kp W         &kp E             &kp R               &kp T                                      &kp Y        &kp U  &kp I      &kp O    &lt 5 P
+&mt LCTRL A       &kp S         &kp D             &mt LEFT_CONTROL F  &kp G        &none          &m_crlf        &kp H        &kp J  &kp K      &kp L    &lt 1 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V               &kp B        &kp TAB        &m_lf          &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &alt_lt 7 LANG2     &lt 2 SPACE  &kp LANG1      &kp BACKSPACE  &lt 3 ENTER                             &lt 6 ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -320,10 +391,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &none  &none    &none    &none                          &kp SQT   &m_dqt            &kp SEMICOLON      &m_colon   &kp EQUAL
-&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret  &m_amps           &m_star            &m_lpar    &m_rpar
-&kp LEFT_SHIFT  &none  &none    &none    &none     &none       &none    &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &m_lbrace  &m_rbrace
-&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                                    &none
+&kp ESC         &none  &none    &none    &none                          &kp EQUAL  &kp SQT    &m_dqt     &kp SEMICOLON  &m_colon
+&m_excl         &m_at  &m_hash  &m_dllr  &m_prcnt  &none       &none    &m_caret   &m_amps    &m_star    &m_lpar        &m_rpar
+&kp LEFT_SHIFT  &none  &m_lt    &m_gt    &none     &none       &none    &none      &m_lbrace  &m_rbrace  &kp LBKT       &kp RBKT
+&none           &none  &none    &trans   &trans    &trans      &kp DEL  &trans                                          &none
             >;
         };
 
