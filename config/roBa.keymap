@@ -58,6 +58,11 @@
             bindings = <&tog_ls_off>;
             key-positions = <21 33>;
         };
+
+        shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
