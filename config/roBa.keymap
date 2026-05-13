@@ -279,28 +279,28 @@
             bindings = <&macro_tap>, <&kp BACKSLASH &kp N>;
         };
 
-        m_s_pgup: m_s_pgup {
+        m_c_pgup: m_c_pgup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LSHFT>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp PAGE_UP>,
                 <&macro_release>,
-                <&kp LSHFT>;
+                <&kp LCTRL>;
         };
 
-        m_s_pgdn: m_s_pgdn {
+        m_c_pgdn: m_c_pgdn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LSHFT>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp PAGE_DOWN>,
                 <&macro_release>,
-                <&kp LSHFT>;
+                <&kp LCTRL>;
         };
 
         // Layer-mod: holds LALT + activates specified layer
@@ -411,7 +411,7 @@
             bindings = <
 &kp F1            &kp F2              &kp F3           &kp F4             &kp F5                                &kp F6          &kp F7          &kp F8        &kp F9           &none
 &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)  &kp F10          &kp F11            &kp F12           &trans      &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_SHIFT    &kp LEFT_GUI        &m_s_pgup        &m_s_pgdn          &kp LG(UP_ARROW)  &trans      &none   &none           &kp HOME        &kp END       &none            &none
+&kp LEFT_SHIFT    &kp LEFT_GUI        &m_c_pgup        &m_c_pgdn          &kp LG(UP_ARROW)  &trans      &none   &none           &kp HOME        &kp END       &none            &none
 &trans            &trans              &trans           &trans             &trans            &trans      &trans  &trans                                                         &none
             >;
 
