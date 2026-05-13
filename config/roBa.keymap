@@ -282,6 +282,8 @@
         m_c_pgup: m_c_pgup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
@@ -294,6 +296,8 @@
         m_c_pgdn: m_c_pgdn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
