@@ -63,6 +63,11 @@
             bindings = <&kp RIGHT_SHIFT>;
             key-positions = <24 25>;
         };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
