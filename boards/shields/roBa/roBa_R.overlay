@@ -52,7 +52,7 @@
     status = "okay";
     device = <&trackball>;
     input-processors = <
-        &zip_temp_layer_threshold 4 10000
+        &zip_temp_layer_threshold 4 100000
         &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
         &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
     >;
