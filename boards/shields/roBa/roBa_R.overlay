@@ -28,7 +28,7 @@
         #input-processor-cells = <2>;
         
         // AML発動に必要な累積移動量
-        threshold = <15>;
+        threshold = <25>;
         
         // 以下で指定したキー以外を押すとAML解除
         excluded-positions = <
