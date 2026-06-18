@@ -18,7 +18,7 @@
     tapping-term-ms = <180>;
 };
 
-&trackball { scroll-layers = <5 8>; };
+&trackball { scroll-layers = <5>; };
 
 / {
     combos {
