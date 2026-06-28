@@ -20,6 +20,10 @@
 
 &trackball { scroll-layers = <5>; };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SPACE>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
